@@ -1,0 +1,27 @@
+
+
+/* btnSearchTodo */
+
+.inputSearchTodo, .inputSearchTodo:focus:hover:active, .inputSearchTodo:hover{
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 36px;
+    font-size: var(--small);
+    text-align: center;
+    border-color: black;
+    border: 2px black dashed;
+    height: 42px;
+}
+
+.inputSearchTodo::placeholder {
+    color: var(--black);
+    border: 0;
+    font-size: var(--small);
+    text-align: center;
+    font-weight: bold;
+    line-height: 36px;
+    
+}
+

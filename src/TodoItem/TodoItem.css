@@ -1,0 +1,84 @@
+
+
+
+.TodoItem {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    padding: 24px 0;
+}
+
+.TodoItem-checkbox {
+    display: none;
+}
+  
+
+/*When hover*/
+.TodoItem-custom-checkbox:hover span{
+    border: 3px solid gray;
+}
+
+/*When checked*/
+.TodoItem-custom-checkbox input:checked + span {
+   border: 3px solid black
+}
+  
+
+.TodoItem-checkbox{
+    display: none;
+}
+
+
+
+.TodoItem-checkbox-active:checked{
+    content: "✔";
+    color: red;
+    font-size: var(--extrabig);
+}
+
+.TodoItemSpanBox {
+    border: 3px solid var(--black);
+    height: 36px;
+    width: 36px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.TodoItemSpan:before {
+    content: "✔";
+    color: red;
+    font-size: var(--extrabig);
+ }
+
+/*
+.TodoItem-custom-checkbox input:checked + span:before {
+   content: "✔";
+   color: red;
+   font-size: var(--extrabig);
+//}
+*/
+
+.TodoItem p {
+    font-size: var(--normal);
+    line-height: 36px;
+    font-weight: 700;
+    font-style: normal;
+    word-wrap: normal;
+    word-break: break-all;
+    padding: 0 15px;
+}
+
+.TodoItem button {
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 100;
+}
+

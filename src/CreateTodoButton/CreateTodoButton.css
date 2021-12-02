@@ -1,0 +1,17 @@
+
+
+
+.btnCreateTodo {
+    border-radius: 50% 50%;
+    width: 107px;
+    height: 107px;
+    border: 8px black solid;
+    background: #FF404C;
+    color: var(--white);
+    font-size: var(--normal);
+    line-height: 36px;
+    font-style: normal;
+    font-weight: bold;
+    position: absolute;
+    bottom: -50px;
+}

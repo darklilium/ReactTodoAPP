@@ -18,7 +18,7 @@ function AppUI (){
 
         <TodoCounter/>  
     
-        <div className="todo-inner-wrapper">
+       <div className="todo-inner-wrapper">
 
         <TodoSearch/> 
 
@@ -39,14 +39,15 @@ function AppUI (){
             </TodoList>
        
         </div>
+        <CreateTodoButton setOpenModal={setOpenModal} createTodo={createTodo} setModalText={setModalText} /> 
+      
         
         {!!openModal && (
             <Modal setOpenModal={setOpenModal} modalText={modalText} />             
         )}
-       
+        
 
-        <CreateTodoButton setOpenModal={setOpenModal} createTodo={createTodo} setModalText={setModalText} /> 
-         
+        
     </React.Fragment>  
     );
 }

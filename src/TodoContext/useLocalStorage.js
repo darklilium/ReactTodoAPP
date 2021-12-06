@@ -31,7 +31,7 @@ function useLocalStorage (itemName, initialValue) { //'TODOS_V1'
         } catch (error) {
           setError(error) //if error when loading
         }
-      },1000)
+      },2000)
     });
     
    

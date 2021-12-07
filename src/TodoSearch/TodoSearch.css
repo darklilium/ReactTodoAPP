@@ -13,6 +13,7 @@
     border-color: black;
     border: 2px black dashed;
     height: 42px;
+    width: 99%;
 }
 
 .inputSearchTodo::placeholder {

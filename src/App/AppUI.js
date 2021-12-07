@@ -6,6 +6,8 @@ import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
 import { Modal } from '../Modal';
+import {TodoHeader} from '../TodoHeader';
+
 
 function AppUI (){
 
@@ -20,20 +22,33 @@ function AppUI (){
         createTodo, 
         modalText, 
         setModalText,
-        totalTodos, completedTodos} = React.useContext(TodoContext);
+        totalTodos, completedTodos,
+        searchValue, setSearchValue} = React.useContext(TodoContext);
 
 
     return(
     <React.Fragment>
+       <TodoHeader totalTodos = {totalTodos} completedTodos = {completedTodos}
+        searchValue = {searchValue} setSearchValue = {setSearchValue}/> 
 
-       <TodoCounter
-        totalTodos = {totalTodos}
-        completedTodos = {completedTodos}
-       />  
-    
+        <div className="todo-header-wrapper">
+            <TodoHeader>
+                <TodoCounter
+                    totalTodos = {totalTodos}
+                    completedTodos = {completedTodos}
+                />  
+                <TodoSearch 
+                    searchValue = {searchValue}
+                    setSearchValue = {setSearchValue}
+                />     
+            </TodoHeader>
+        </div>
+
        <div className="todo-inner-wrapper">
 
-        <TodoSearch/> 
+        {/* <TodoSearch 
+            searchValue = {searchValue}
+            setSearchValue = {setSearchValue} />  */}
 
             <TodoList>
             

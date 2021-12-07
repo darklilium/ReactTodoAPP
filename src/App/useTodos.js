@@ -57,7 +57,12 @@ function useTodos() {
         console.log(index);
         //const todoIndex = todos.findIndex(todo=> todo.id === id); //finding the index selected based on text
         const newItem = [...todos]; //get a new array of todos state replacement
-        newItem[index].completed = true; //change the completion to true
+        if(!newItem[index].completed){
+          newItem[index].completed = true; //change the completion to true
+        }else{
+          newItem[index].completed = false;
+        }
+       
        
         //save in localstorage and then modify the state in there as well 
         saveTodos(newItem);

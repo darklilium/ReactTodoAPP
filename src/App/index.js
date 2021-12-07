@@ -5,7 +5,6 @@ import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
-
 import { Modal } from '../Modal';
 import {TodoHeader} from '../TodoHeader';
 
@@ -43,7 +42,7 @@ function App() {
               </TodoHeader>
           </div>
   
-         <div className="todo-inner-wrapper">
+         <div className="todolist-inner-wrapper">
     
               <TodoList>
               

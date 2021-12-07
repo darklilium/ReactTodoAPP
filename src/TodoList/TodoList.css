@@ -1,5 +1,19 @@
 
+/*TODOList Inner Wrapper*/
 
+.todolist-inner-wrapper {
+    max-width: 425px;
+    min-width: 270px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 8px black;
+    border-style: solid;
+    background: white;
+    margin-top: 25px;
+    padding: 9px 9px 60px;
+    min-height: 200px;
+}
 
 .TodoList {
     font-size:  var(--small);

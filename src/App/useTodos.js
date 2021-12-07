@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const TodoContext = React.createContext();
 
-function TodoProvider (props) {
+//Custom hook instead of provider
+function useTodos() {
     //variable : how you name them right now.
     //useLocalStorage is a custom hook that returns an object with the item,
     const {
@@ -81,7 +81,7 @@ function TodoProvider (props) {
     
 
     return (
-        <TodoContext.Provider value={{
+        {
             loading ,
             error ,
             completedTodos,
@@ -97,10 +97,8 @@ function TodoProvider (props) {
             modalText,
             setModalText,
             
-        }}>
-            {props.children}
-        </TodoContext.Provider>
+        }
     )
 }
 
-export { TodoContext, TodoProvider }
+export { useTodos }

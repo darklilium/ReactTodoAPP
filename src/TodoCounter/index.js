@@ -4,8 +4,8 @@ import './TodoCounter.css';
 
 
 
-function TodoCounter() {
-    const {totalTodos, completedTodos} = React.useContext(TodoContext);
+function TodoCounter({totalTodos, completedTodos}) {
+   
     return (
         <div className='TodoCounter-title-wrapper'>
             <p className='TodoCounter-title'>What's up today?</p>

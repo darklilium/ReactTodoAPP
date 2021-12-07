@@ -9,14 +9,27 @@ import { Modal } from '../Modal';
 
 function AppUI (){
 
-    const {error, loading, findRelatedTodos, completeTodo, deleteTodo, 
-            openModal, setOpenModal, createTodo, modalText, setModalText} = React.useContext(TodoContext);
+    const {
+        error, 
+        loading, 
+        findRelatedTodos, 
+        completeTodo, 
+        deleteTodo, 
+        openModal, 
+        setOpenModal, 
+        createTodo, 
+        modalText, 
+        setModalText,
+        totalTodos, completedTodos} = React.useContext(TodoContext);
 
 
     return(
     <React.Fragment>
 
-        <TodoCounter/>  
+       <TodoCounter
+        totalTodos = {totalTodos}
+        completedTodos = {completedTodos}
+       />  
     
        <div className="todo-inner-wrapper">
 

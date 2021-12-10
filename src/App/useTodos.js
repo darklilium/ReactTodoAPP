@@ -63,7 +63,6 @@ function useTodos() {
           newItem[index].completed = false;
         }
        
-       
         //save in localstorage and then modify the state in there as well 
         saveTodos(newItem);
         changeList(newItem);

@@ -108,3 +108,6 @@ body{
 padding: 6px 5px;
 }
 
+.TodoCounter--loading{
+    opacity: 25%;
+}

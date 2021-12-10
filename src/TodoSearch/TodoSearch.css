@@ -26,3 +26,7 @@
     
 }
 
+
+.inputSearchTodo:disabled{
+    opacity: 25%;
+}

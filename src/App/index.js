@@ -28,7 +28,8 @@ function App() {
     setModalText,
     totalTodos, completedTodos,
     searchValue, setSearchValue,
-    sincronizeTodos} = useTodos();
+    sincronizeTodos,
+    } = useTodos();
 
 
     return(
@@ -45,12 +46,13 @@ function App() {
                 />
             </TodoHeader>
 
-            <ChangeAlertWithStorageListener sincronize={sincronizeTodos} />    {/* high order comp.*/ }  
+            
           </div>
   
         <div className="todolist-inner-wrapper">
 
                 <TodoList 
+                   
                     error={error}
                     loading={loading}
                     totalTodos = {totalTodos}
@@ -102,7 +104,7 @@ function App() {
             {!!openModal && (
                 <Modal setOpenModal={setOpenModal} modalText={modalText} />             
             )}
-          
+            <ChangeAlertWithStorageListener sincronize={sincronizeTodos} />    {/* high order comp.*/ } 
             <CreateTodoButton setOpenModal={setOpenModal} createTodo={createTodo} setModalText={setModalText} /> 
           
   

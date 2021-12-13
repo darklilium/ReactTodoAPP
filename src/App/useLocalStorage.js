@@ -64,7 +64,7 @@ function useLocalStorage (itemName, initialValue) { //'TODOS_V1'
       loading, //returning the state of loading var
       error, //returning the state of error var
       setItem, //for changing the state of todo list but not modify the LS
-      sincronize, //sharing the fx in the rest of app!
+      sincronize, //sharing the fx in the rest of app!,
     };
   
   }

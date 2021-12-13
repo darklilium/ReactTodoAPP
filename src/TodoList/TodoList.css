@@ -21,3 +21,11 @@
     padding: 24px 0;
     min-width: 270px;
 }
+
+.TodoList--loading {
+    opacity: 25%;
+}
+
+.TodoList--notLoading{
+    opacity: 100%;
+}

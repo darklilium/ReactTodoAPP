@@ -2,7 +2,7 @@ import React from "react";
 
 function TodoLoading (){
     return (
-        <p>Loading, dont panic!</p>
+        <p>Loading TODOs, dont panic!</p>
     );
 }
 

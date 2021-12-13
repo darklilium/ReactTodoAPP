@@ -8,6 +8,8 @@ function useLocalStorage (itemName, initialValue) { //'TODOS_V1'
    
     //For changing the state for the todoList previously obtained
     const [item, setItem] = React.useState(initialValue);  //saves the item and creates a setter fx
+
+    const [sincronizeItem, setSincronizeItem] = React.useState(true);
   
     React.useEffect(()=>{
       setTimeout(()=>{ //simulating a promise
@@ -28,12 +30,21 @@ function useLocalStorage (itemName, initialValue) { //'TODOS_V1'
    
            //it is loaded alr.
            setLoading(false); //when finishes loading
+
+           setSincronizeItem(true) //when everything is ok. Everything is sincronized! :D
+
         } catch (error) {
           setError(error) //if error when loading
         }
-      },2000)
-    });
+      },3000)//works every 3 secs.
+    }, [sincronizeItem]); //loads once when empty array or when any property changes.
     
+    //sincronize fx
+    const sincronize = () => {
+      setLoading(true); //loading view
+      setSincronizeItem(false);
+
+    }
    
     //To modify the state and save it on localstorage
     const saveItem = (newItem) => {
@@ -53,6 +64,7 @@ function useLocalStorage (itemName, initialValue) { //'TODOS_V1'
       loading, //returning the state of loading var
       error, //returning the state of error var
       setItem, //for changing the state of todo list but not modify the LS
+      sincronize, //sharing the fx in the rest of app!,
     };
   
   }

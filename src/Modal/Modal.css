@@ -1,51 +1,35 @@
 
-.Modal-bg {
-    width: 100%;
-    /* position: absolute; */
-   
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-
-
 .Modal-Container {
     display: flex;
-    background: red;
     min-height: 150px;
     place-items: center;
     place-content: center;
     flex-direction: column;
-    opacity: 100%;
-    left: 0;
-    position: relative;
-    border: 5px black solid;
-   
-   
+    /*glassmorphism*/
+    background: rgba( 255, 255, 255, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.Modal-btnClose{
-  
+.Modal-btnClose {
     position: absolute;
     top: 0;
     right: 0;
     font-size: var(--big);
     padding: 0 10px;
-   
+    color: black;
 }
 
 .Modal-Container p {
     font-size: var(--small);
     font-weight: 800;
-    color: var(--white);
+    color: #fe1221;
     padding: 40px;
     text-align: center;
     line-height: 30px;
     
 }
 
-#myModal {
-    bottom: 0;
-}
 

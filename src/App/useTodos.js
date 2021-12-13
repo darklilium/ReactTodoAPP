@@ -12,6 +12,8 @@ function useTodos() {
         loading,
         error,
         setItem: changeList,
+        sincronize: sincronizeTodos,
+        
       } = useLocalStorage('TODOS_V1', []);
     
       //For seach a todo and fx for changing value
@@ -63,7 +65,6 @@ function useTodos() {
           newItem[index].completed = false;
         }
        
-       
         //save in localstorage and then modify the state in there as well 
         saveTodos(newItem);
         changeList(newItem);
@@ -101,6 +102,8 @@ function useTodos() {
             createTodo,
             modalText,
             setModalText,
+            sincronizeTodos,
+            
             
         }
     )

@@ -11,6 +11,8 @@ import { TodoError } from '../TodoError';
 import { TodoLoading } from "../TodoLoading";
 import { EmptyTodos } from "../EmptyTodos";
 import { EmptySearchResults } from '../EmptySearchResults';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+
 
 function App() {
   const {
@@ -25,7 +27,8 @@ function App() {
     modalText, 
     setModalText,
     totalTodos, completedTodos,
-    searchValue, setSearchValue} = useTodos();
+    searchValue, setSearchValue,
+    sincronizeTodos} = useTodos();
 
 
     return(
@@ -41,7 +44,8 @@ function App() {
                     setSearchValue={setSearchValue}
                 />
             </TodoHeader>
-               
+
+            <ChangeAlertWithStorageListener sincronize={sincronizeTodos} />    {/* high order comp.*/ }  
           </div>
   
         <div className="todolist-inner-wrapper">
@@ -100,7 +104,7 @@ function App() {
             )}
           
             <CreateTodoButton setOpenModal={setOpenModal} createTodo={createTodo} setModalText={setModalText} /> 
-    
+          
   
           
       </React.Fragment>  
